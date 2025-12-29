@@ -2,7 +2,10 @@ import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import ieeeLogo from '../assets/images/logo.svg.png';
+import algorandLogo from '../assets/images/algorand.png';
+import gfgLogo from '../assets/images/gfg.png.png';
+import klhLogo from '../assets/images/klh.png.png'
 // Floating Lines Background Component
 const FloatingLinesBackground = () => {
   const controls = useAnimation();
@@ -60,11 +63,7 @@ const FloatingLinesBackground = () => {
   );
 };
 
-// Import local logo files
-import ieeeLogo from '../assets/images/logo.svg.png';
-import algorandLogo from '../assets/images/algorand.png';
-import gfgLogo from '../assets/images/gfg.png.png';
-import klhLogo from '../assets/images/klh.png.png'
+
 
 // Other logo URLs
 //const ieeeLogo = 'https://www.ieee.org/ucm/groups/public/@ieee/@web/@org/documents/images/ieee_logo_mb_tagline_white.png';
