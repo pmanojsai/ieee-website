@@ -1,11 +1,19 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock } from 'lucide-react';
+import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ieeeLogo from '../assets/images/logo.svg.png';
 import algorandLogo from '../assets/images/algorand.png';
 import gfgLogo from '../assets/images/gfg.png.png';
-import klhLogo from '../assets/images/klh.png.png'
+import klhLogo from '../assets/images/klh.png.png';
+import ImageCarousel from '../components/ImageCarousel';
+import p1 from '../assets/images/RP-1.png';
+import p2 from '../assets/images/RP-2.png';
+import p3 from '../assets/images/RP-3.png';
+import p4 from '../assets/images/RP-4.png';
+import p5 from '../assets/images/RP-5.png';
+import p6 from '../assets/images/RP-6.png';
+import p7 from '../assets/images/RP-7.png';
 // Floating Lines Background Component
 const FloatingLinesBackground = () => {
   const controls = useAnimation();
@@ -69,6 +77,19 @@ const FloatingLinesBackground = () => {
 //const ieeeLogo = 'https://www.ieee.org/ucm/groups/public/@ieee/@web/@org/documents/images/ieee_logo_mb_tagline_white.png';
 
 const Rampage = () => {
+  // Previous year event images using RP images
+  const eventImages = [
+    p1,
+    p2,
+    p3,
+    p4,
+    p5,
+    p6,
+    p7,
+    require('../assets/images/ec-1.jpg'),
+    require('../assets/images/ec-2.png'),
+    require('../assets/images/ec-3.jpg')
+  ];
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       {/* Hero Section */}
@@ -269,12 +290,7 @@ const Rampage = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <motion.a
-                  href="#register"
-                  className="group relative px-8 py-4 font-medium text-lg rounded-full overflow-hidden"
-                  whileHover={{ scale: 1.03 }}
-                  whileTap={{ scale: 0.98 }}
-                >
+                <Link to="/register" className="group relative px-8 py-4 font-medium text-lg rounded-full overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full transform group-hover:scale-105 transition-transform duration-300"></div>
                   <div className="absolute inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center space-x-2 text-blue-900 font-bold">
@@ -283,7 +299,7 @@ const Rampage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </div>
-                </motion.a>
+                </Link>
 
                 <motion.a
                   href="#details"
@@ -398,7 +414,6 @@ const Rampage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <Coffee className="w-8 h-8 text-blue-600" />, text: "Refreshments provided throughout Event" },
               { icon: <Utensils className="w-8 h-8 text-green-600" />, text: "Lunch, dinner & supper included" },
               { icon: <Award className="w-8 h-8 text-yellow-600" />, text: "Entertainment and fun activities" },
               { icon: <FileText className="w-8 h-8 text-purple-600" />, text: "Engaging breaks & relaxation sessions" },
@@ -422,7 +437,7 @@ const Rampage = () => {
         </div>
       </section>
 
-      {/* Previous Edition - Rampage 2.5 */}
+      {/* Rampage 2.5 Highlights */}
       <section className="py-16 bg-gray-100 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -444,10 +459,20 @@ const Rampage = () => {
               <h3 className="text-2xl font-bold mb-4 text-blue-700 dark:text-blue-400">Rampage 2.5 Highlights</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
+                  <MapPin className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-semibold">Location</h4>
+                    <p className="text-gray-600 dark:text-gray-300">KLH University, Bowrampet</p>
+                    <p className="text-gray-600 dark:text-gray-300">Bowrampet Village, Bachupally Mandal</p>
+                    <p className="text-gray-600 dark:text-gray-300">Hyderabad, Telangana 500043</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
                   <Calendar className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold">Event Date</h4>
-                    <p className="text-gray-600 dark:text-gray-300">December 15-16, 2024</p>
+                    <h4 className="font-semibold">Event Date & Time</h4>
+                    <p className="text-gray-600 dark:text-gray-300">Wednesday, January 23, 2025</p>
+                    <p className="text-gray-600 dark:text-gray-300">10:00 AM - 4:00 PM</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -480,52 +505,36 @@ const Rampage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-bold mb-6 text-blue-700 dark:text-blue-400">Winners of Rampage 2.5</h3>
-              <div className="space-y-6">
+              <h3 className="text-2xl font-bold mb-6 text-blue-700 dark:text-blue-400">Rampage 2.5 Winners</h3>
+              <div className="space-y-4">
                 {[
-                  { place: '1st Place', team: 'Team Innovators', project: 'AI-Powered Healthcare Assistant' },
-                  { place: '2nd Place', team: 'Code Wizards', project: 'Blockchain Voting System' },
-                  { place: '3rd Place', team: 'Tech Titans', project: 'Smart City IoT Solution' }
+                  { team: 'HASH ECLIPSE', domain: 'VLSI', place: '1st Place', emoji: '🥇' },
+                  { team: 'HIERARCHIAL', domain: 'AIML', place: '1st Place', emoji: '🥇' },
+                  { team: 'DEV DYNASTY', domain: 'Web Development', place: '1st Place', emoji: '🥇' },
+                  { team: 'NOHUNPUNS', domain: 'IoT', place: '1st Place', emoji: '🥇' }
                 ].map((winner, index) => (
-                  <div key={index} className="flex items-center p-4 bg-gray-50 dark:bg-gray-600 rounded-lg">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold mr-4">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 dark:text-white">{winner.team}</h4>
-                      <p className="text-gray-600 dark:text-gray-300">{winner.project}</p>
-                      <span className="inline-block mt-1 px-2 py-0.5 text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300 rounded">
-                        {winner.place}
-                      </span>
+                  <div key={index} className="p-4 bg-gray-50 dark:bg-gray-600 rounded-lg hover:shadow-md transition-shadow">
+                    <div className="flex items-center">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 flex items-center justify-center text-white font-bold mr-3">
+                        {index + 1}
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-gray-900 dark:text-white">{winner.team} {winner.emoji}</h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">{winner.domain}</p>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
             </motion.div>
           </div>
-
-          <div className="text-center mt-12">
-            <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Relive the Experience</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {[1, 2, 3, 4].map((item) => (
-                <motion.div 
-                  key={item}
-                  whileHover={{ y: -5, scale: 1.03 }}
-                  className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md cursor-pointer"
-                >
-                  <div className="aspect-w-16 aspect-h-9 bg-gray-200 dark:bg-gray-600">
-                    <div className="w-full h-full flex items-center justify-center text-gray-400">
-                      <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+          
+          {/* Rampage 2.5 Gallery */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Rampage 2.5 Gallery</h3>
+            <div className="rounded-xl overflow-hidden shadow-2xl">
+              <ImageCarousel images={[p1, p2, p3, p4, p5, p6, p7]} />
             </div>
-            <button className="mt-8 px-6 py-2 border border-blue-600 text-blue-600 dark:border-blue-400 dark:text-blue-400 rounded-full font-medium hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors">
-              View Full Gallery
-            </button>
           </div>
         </div>
       </section>
@@ -546,18 +555,221 @@ const Rampage = () => {
             Don't miss out on this exciting 24-hour hackathon. Build something amazing with us!
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a
-              href="#"
+            <Link
+              to="/register"
               className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-yellow-400 hover:bg-yellow-500 transition-colors duration-300"
             >
               Register Now
-            </a>
+            </Link>
             <a
-              href="#"
+              href="#schedule"
               className="inline-flex items-center justify-center px-8 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors duration-300"
             >
               View Schedule
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Schedule Section */}
+      <section id="schedule" className="py-16 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+              <span className="block">Event Schedule</span>
+              <span className="block text-blue-600 dark:text-blue-400 text-2xl mt-2">24 Hours of Non-Stop Innovation</span>
+            </h2>
+            <div className="mt-4 w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Round 1 */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl h-full border-l-4 border-blue-500">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                    <span className="text-blue-600 dark:text-blue-400 text-xl font-bold">01</span>
+                  </div>
+                  <h3 className="ml-4 text-xl font-bold text-gray-900 dark:text-white">Ideation Sprint</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-blue-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">9:30 – 10:00 AM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Problem & Rapid Ideation</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-blue-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">10:00 – 11:00 AM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">One Page Idea PPT</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-blue-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">11:00 AM – 12:00 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Idea Defence (Documentation)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border-l-4 border-yellow-400">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">12:30 – 1:30 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 font-medium">Lunch Break</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-400">
+                    <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">Key Focus Areas:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                      <li className="flex items-center"><span className="text-blue-500 mr-2">✓</span> Verification</li>
+                      <li className="flex items-center"><span className="text-blue-500 mr-2">✓</span> Implementation</li>
+                      <li className="flex items-center"><span className="text-blue-500 mr-2">✓</span> Optimization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Round 2 */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl h-full border-l-4 border-purple-500">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
+                    <span className="text-purple-600 dark:text-purple-400 text-xl font-bold">02</span>
+                  </div>
+                  <h3 className="ml-4 text-xl font-bold text-gray-900 dark:text-white">Build & Innovate</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-purple-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">1:30 – 2:30 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Architecture / Flow Design</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-purple-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">2:30 – 5:30 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Mid-build Progress Check</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-purple-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">5:30 – 6:30 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Innovation Booster</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-6 p-3 bg-purple-50 dark:bg-purple-900/20 rounded-lg border-l-4 border-purple-400">
+                    <h4 className="text-sm font-medium text-purple-800 dark:text-purple-200 mb-2">Build Windows:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                      <li className="flex items-center"><span className="text-purple-500 mr-2">•</span> 6:30 PM – 12:00 AM: Build Window</li>
+                      <li className="flex items-center"><span className="text-purple-500 mr-2">•</span> 7:30 – 11:30 PM: Primary Build</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Round 3 */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+              <div className="relative bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl h-full border-l-4 border-indigo-500">
+                <div className="flex items-center mb-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/30 flex items-center justify-center">
+                    <span className="text-indigo-600 dark:text-indigo-400 text-xl font-bold">03</span>
+                  </div>
+                  <h3 className="ml-4 text-xl font-bold text-gray-900 dark:text-white">Polish & Prove</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-indigo-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">Ongoing</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Usability & Accessibility Check</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">Ongoing</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Testing & Failure Handling</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-pink-50 dark:bg-pink-900/20 p-4 rounded-lg border-l-4 border-pink-400">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">5:00 – 6:00 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 font-medium">Evening Refreshment + Fun Activity</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-indigo-50 dark:bg-gray-700 p-4 rounded-lg">
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
+                      </div>
+                      <div className="ml-3">
+                        <p className="text-sm font-medium text-gray-900 dark:text-white">6:00 – 7:00 PM</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">Build Continues</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-6 p-3 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg border-l-4 border-indigo-400">
+                    <h4 className="text-sm font-medium text-indigo-800 dark:text-indigo-200 mb-2">Final Phase:</h4>
+                    <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
+                      <li className="flex items-center"><span className="text-indigo-500 mr-2">•</span> Demos + Documentation</li>
+                      <li className="flex items-center"><span className="text-indigo-500 mr-2">•</span> 7:00 – 8:00 AM: Demo Prep</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

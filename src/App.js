@@ -26,7 +26,8 @@ const OurEvents = lazy(() => import('./pages/OurEvents'));
 const ContactUs = lazy(() => import('./pages/ContactUs'));
 const Gallery = lazy(() => import('./pages/Gallery'));
 
-// Dark Mode Context
+
+const Register = lazy(() => import('./pages/register'));// Dark Mode Context
 export const DarkModeContext = createContext();
 
 function App() {
@@ -98,6 +99,10 @@ function App() {
                 <Route path="/contact" element={<ContactUs />} />
                 <Route path="/membership" element={<Membership />} />
                 <Route path="/rampage" element={<Rampage />} />
+
+
+                <Route path="/register" element={<Register />} />
+
               </Routes>
               </Suspense>
             </main>

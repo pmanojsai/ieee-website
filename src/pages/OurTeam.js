@@ -32,10 +32,12 @@ import s6 from '../assets/images/s-6.jpg';
 import s7 from '../assets/images/s-7.jpg';
 import s8 from '../assets/images/s-8.jpg';
 import s9 from '../assets/images/s-9.jpg';
+import principal from '../assets/images/principal.png';
+import ithod from '../assets/images/ithod.png';
 // Core IEEE Team (default)
 
 const advicers = {
-  IEEE: 'Dr. Lakshmi Prasanna Yeluri',  
+  IEEE: 'Dr.l koteswararao',  
   WIE: 'Dr. Lakshmi Prasanna Yeluri',   
 };
 
@@ -369,7 +371,7 @@ const OurTeam = () => {
             {/* First Advisor */}
             <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 border-2 border-blue-200 dark:border-blue-700 shadow-2xl flex items-center gap-6">
               <img
-                src={a1}
+                src={principal}
                 className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/40"
                 alt="Dr. Lakshmi Prasanna Yeluri"
               />
@@ -379,7 +381,7 @@ const OurTeam = () => {
                 </p>
 
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-        Dr. Lakshmi Prasanna Yeluri
+        l koteswararao
       </h3>
 
       <p className="text-gray-600 dark:text-gray-300 text-sm">
@@ -400,7 +402,7 @@ const OurTeam = () => {
           {/* Second Advisor */}
           <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 border-2 border-blue-200 dark:border-blue-700 shadow-2xl flex items-center gap-6">
             <img
-              src={a1}
+              src={principal}
               className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/40"
               alt="Lakshmi Prasanna"
             />
@@ -410,7 +412,7 @@ const OurTeam = () => {
               </p>
 
       <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-        Lakshmi Prasanna
+        l koteswar rao
       </h3>
 
       <p className="text-gray-600 dark:text-gray-300 text-sm">
