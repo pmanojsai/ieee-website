@@ -19,6 +19,38 @@ const Registration = () => {
             Register for Rampage 2.6
           </h1>
           
+          {/* Important Registration Guidelines */}
+          <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+            <h2 className="text-2xl font-bold text-yellow-800 dark:text-yellow-300 mb-4 flex items-center">
+              <svg className="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h.01a1 1 0 100-2H10V9z" clipRule="evenodd" />
+              </svg>
+              IMPORTANT REGISTRATION GUIDELINES
+            </h2>
+            <div className="space-y-3 text-yellow-700 dark:text-yellow-300">
+              <p className="flex items-start">
+                <span className="font-bold mr-2">1.</span>
+                <span>Please read all instructions carefully before proceeding with payment.</span>
+              </p>
+              <p className="flex items-start">
+                <span className="font-bold mr-2">2.</span>
+                <span>Ensure all personal details are entered correctly as they will be used for certification.</span>
+              </p>
+              <p className="flex items-start">
+                <span className="font-bold mr-2">3.</span>
+                <span>Payment once made is non-refundable.</span>
+              </p>
+              <p className="flex items-start">
+                <span className="font-bold mr-2">4.</span>
+                <span>Keep your payment receipt safe for future reference.</span>
+              </p>
+              <p className="flex items-start">
+                <span className="font-bold mr-2">5.</span>
+                <span>For any issues, contact us at ieee@klh.edu.in</span>
+              </p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Scan to Register</h2>

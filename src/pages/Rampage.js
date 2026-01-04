@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,13 +7,14 @@ import algorandLogo from '../assets/images/algorand.png';
 import gfgLogo from '../assets/images/gfg.png.png';
 import klhLogo from '../assets/images/klh.png.png';
 import ImageCarousel from '../components/ImageCarousel';
-import p1 from '../assets/images/RP-1.png';
-import p2 from '../assets/images/RP-2.png';
-import p3 from '../assets/images/RP-3.png';
-import p4 from '../assets/images/RP-4.png';
-import p5 from '../assets/images/RP-5.png';
-import p6 from '../assets/images/RP-6.png';
-import p7 from '../assets/images/RP-7.png';
+// Import all RP images
+const p1 = require('../assets/images/RP-1.png');
+const p2 = require('../assets/images/RP-2.png');
+const p3 = require('../assets/images/RP-3.png');
+const p4 = require('../assets/images/RP-4.png');
+const p5 = require('../assets/images/RP-5.png');
+const p6 = require('../assets/images/RP-6.png');
+const p7 = require('../assets/images/RP-7.png');
 // Floating Lines Background Component
 const FloatingLinesBackground = () => {
   const controls = useAnimation();
@@ -77,18 +78,16 @@ const FloatingLinesBackground = () => {
 //const ieeeLogo = 'https://www.ieee.org/ucm/groups/public/@ieee/@web/@org/documents/images/ieee_logo_mb_tagline_white.png';
 
 const Rampage = () => {
-  // Previous year event images using RP images
+  const [selectedImage, setSelectedImage] = useState(null);
+  
+  // Previous year event images using RP images (showing only RP-1 to RP-6)
   const eventImages = [
-    p1,
-    p2,
-    p3,
-    p4,
-    p5,
-    p6,
-    p7,
-    require('../assets/images/ec-1.jpg'),
-    require('../assets/images/ec-2.png'),
-    require('../assets/images/ec-3.jpg')
+    { src: p1, alt: 'Rampage highlight 1' },
+    { src: p2, alt: 'Rampage highlight 2' },
+    { src: p3, alt: 'Rampage highlight 3' },
+    { src: p4, alt: 'Rampage highlight 4' },
+    { src: p5, alt: 'Rampage highlight 5' },
+    { src: p6, alt: 'Rampage highlight 6' }
   ];
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
@@ -773,6 +772,92 @@ const Rampage = () => {
           </div>
         </div>
       </section>
+
+      {/* Previous Year Highlights Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+              <span className="block">Previous Year Highlights</span>
+              <span className="block text-blue-600 dark:text-blue-400">Relive the Rampage Moments</span>
+            </h2>
+            <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-300 mx-auto">
+              Take a look at the amazing moments from our previous Rampage events
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {eventImages.map((image, index) => (
+              <div 
+                key={index}
+                className="relative group cursor-pointer overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105"
+                onClick={() => setSelectedImage(image.src)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <div className="text-white">
+                    <h3 className="text-lg font-semibold">Rampage {new Date().getFullYear() - 1}</h3>
+                    <p className="text-sm opacity-90">Click to view full size</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center p-4 cursor-pointer"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-4xl w-full">
+            <img
+              src={selectedImage}
+              alt="Highlight"
+              className="w-full h-auto max-h-[80vh] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+            
+            {/* Close Button */}
+            <button 
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                setSelectedImage(null);
+              }}
+              aria-label="Close"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            
+            {/* Download Button */}
+            <a 
+              href={selectedImage} 
+              download={`rampage-highlight-${new Date().getTime()}.jpg`}
+              className="absolute -top-12 right-12 text-white hover:text-blue-400 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+              aria-label="Download image"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+            </a>
+          </div>
+          
+          {/* Image Info */}
+          <div className="mt-4 text-white text-center">
+            <p className="text-sm text-gray-300">Click outside the image or press ESC to close</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

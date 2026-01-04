@@ -222,7 +222,7 @@ const Home = () => (
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
           >
-            Our Faculty Advisors
+            Our IEEE Members Who Got Internships
           </motion.h2>
           <motion.p 
             className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto"
@@ -231,7 +231,7 @@ const Home = () => (
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
           >
-            Meet the dedicated faculty members who guide and mentor our IEEE student branch
+           {/*Meet the dedicated faculty members who guide and mentor our IEEE student branch*/}
           </motion.p>
         </motion.div>
         
@@ -280,7 +280,7 @@ const Home = () => (
                     </svg>
                   </motion.a>
                   <motion.a
-                    href="#"
+                    href="https://www.linkedin.com/in/subrahmanyam-reddy-sanikommu-514292295/"
                     className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800/50 transition-colors"
                     whileHover={{ y: -2, scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

@@ -80,12 +80,175 @@ const Register = () => {
               IEEE Event Registration
             </h1>
             <p className="text-center text-gray-600 dark:text-gray-300 mb-6">
-             //Scan the QR code to register for the event
+             
             </p>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-8 rounded-full"></div>
             
+            {/* Registration Guidelines Section */}
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl mb-8">
+              <h2 className="text-2xl font-bold text-blue-800 dark:text-blue-200 mb-4 flex items-center">
+                <FileText className="w-6 h-6 mr-2" />
+                Registration Guidelines
+              </h2>
+              
+              <div className="space-y-6">
+                {/* Team Formation */}
+                <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+                  <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3 flex items-center">
+                    <Users className="w-5 h-5 mr-2 text-blue-500" />
+                    Team Formation
+                  </h3>
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Form a team of 2–4 members.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Nominate a Team Lead for payment and communication.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Pay the applicable registration fee:</span>
+                      <ul className="ml-6 mt-2 space-y-1">
+                        <li className="flex items-start">
+                          <span className="text-green-500 mr-2">✓</span>
+                          <span><strong>₹800</strong> → All members have active IEEE Membership.</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-green-500 mr-2">✓</span>
+                          <span><strong>₹1000</strong> → One or more members do not have IEEE Membership.</span>
+                        </li>
+                      </ul>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Upload the payment screenshot and provide the UTR ID + Transaction ID for verification.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Secondary Verification */}
+                <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+                  <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3 flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-2 text-green-500" />
+                    Verification Process
+                  </h3>
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>All team members must complete the verification process.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Each member must provide their IEEE Membership ID and other required details for verification.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>This step ensures eligibility for the event.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Approval & Entry Pass */}
+                <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+                  <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3 flex items-center">
+                    <Check className="w-5 h-5 mr-2 text-green-500" />
+                    Approval & Entry Pass
+                  </h3>
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Once all members complete their registration, your team's request will be reviewed.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-2">•</span>
+                      <span>Upon approval, you will receive an Entry Pass + QR Ticket via email.</span>
+                    </li>
+                    <li className="flex items-start text-amber-600 dark:text-amber-400 font-medium">
+                      <span className="mr-2">→</span>
+                      <span>This confirms your team's eligibility to participate in RAMpage V2.6</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
             <div className="grid md:grid-cols-2 gap-8 items-start">
-              {/* QR Code Section - Left Side */}
+              {/* Event Details Section - Left Side */}
+              <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-600">
+                <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">Event Details</h2>
+                
+                <div className="space-y-5">
+                  <div className="flex items-start">
+                    <div className="text-blue-500 dark:text-blue-400 mt-0.5">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Date & Time</p>
+                      <p className="text-gray-800 dark:text-gray-200">Friday<br/>23rd 9:00 am to 24th 9 am</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="text-blue-500 dark:text-blue-400 mt-0.5">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</p>
+                      <p className="text-gray-800 dark:text-gray-200">
+                        KLH University, Bowrampet<br/>
+                        Bachupally Mandal, Hyderabad<br/>
+                        Telangana, 500043, India
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
+                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">What to Bring</h4>
+                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600 dark:text-gray-300">
+                      <li>Your registration confirmation (digital or printed)</li>
+                      <li>Photo ID for check-in</li>
+                      <li>Laptop or tablet (optional)</li>
+                      <li>Questions for our speakers</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                {/* Contact Information */}
+                <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-600">
+                  <h3 className="font-bold text-lg text-gray-800 dark:text-white mb-3">Need Help?</h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                    If you're having trouble with registration or have any questions, please contact our support team.
+                  </p>
+                  <div className="space-y-2 text-sm">
+                    <div className="flex items-center text-blue-600 dark:text-blue-400">
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                      </svg>
+                      <a href="mailto:bmp.ieeeklefb.sb@gmail.com" className="hover:underline">bmp.ieeeklefb.sb@gmail.com</a>
+                    </div>
+                    <div className="flex items-start text-blue-600 dark:text-blue-400">
+                      <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                      </svg>
+                      <div className="flex flex-col space-y-1">
+                        <a href="tel:+919849094295" className="hover:underline">+91 98490 94295</a>
+                        <a href="tel:+918790402776" className="hover:underline">+91 87904 02776</a>
+                        <a href="tel:+917032184675" className="hover:underline">+91 70321 84675</a>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* QR Code Section - Right Side */}
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-600">
                 <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Scan to Register</h2>
@@ -176,18 +339,12 @@ const Register = () => {
                               <CheckCircle className="w-5 h-5 text-blue-500" />
                             </div>
                             <div className="ml-2">
-                              <p className="font-medium">Secondary Verification (via Luma – Mandatory for All Members)</p>
+                              <p className="font-medium">Verification Process</p>
                               <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>All team members must register on the Luma page</li>
-                                <li>Enter IEEE Membership ID and details for verification</li>
-                                <li>This step is FREE and ensures eligibility</li>
+                                <li>All team members must complete the verification process</li>
+                                <li>Enter IEEE Membership ID and required details for verification</li>
+                                <li>This step ensures eligibility for the event</li>
                               </ul>
-                              <a 
-                                href="#" 
-                                className="mt-2 inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-sm"
-                              >
-                                👉 Proceed to Luma Verification Page
-                              </a>
                             </div>
                           </div>
                           
@@ -275,131 +432,115 @@ const Register = () => {
               </div>
 
               {/* Instructions Section - Right Side */}
-              <div className="space-y-6">
-                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border-l-4 border-blue-500">
-                  <h3 className="font-bold text-xl text-blue-800 dark:text-blue-200 mb-4">Event Registration Instructions</h3>
+            {/* <div className="space-y-6">
+                <div className="bg-blue-50/80 dark:bg-blue-900/30 p-6 rounded-xl border-l-4 border-blue-500 shadow-sm">
+                  <h3 className="font-bold text-xl text-blue-800 dark:text-blue-200 mb-4 flex items-center">
+                    <FileText className="w-5 h-5 mr-2.5" />
+                    Registration Guidelines
+                  </h3>
                   
-                  <div className="space-y-5">
+                 <div className="space-y-5">
                     <div className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-300 font-medium mr-3 mt-0.5">
-                        1
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800/80 flex items-center justify-center text-blue-600 dark:text-blue-300 mr-3">
+                        <Users className="w-4 h-4" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-800 dark:text-white">Scan the QR Code</h4>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                          Use your phone's camera to scan the QR code on the left, or click the scan button to use your computer's camera.
+                        <h4 className="font-semibold text-gray-800 dark:text-white">Team Formation & NOC</h4>
+                        <ul className="list-disc pl-5 mt-1.5 space-y-1.5 text-gray-600 dark:text-gray-300 text-sm">
+                          <li>Form a team of 2–4 members</li>
+                          <li>Download and submit the NOC (No Objection Certificate) from your institution</li>
+                          <li className="mt-2">
+                            <a 
+                              href="/noc.pdf" 
+                              download="NOC_Document.pdf"
+                              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline"
+                            >
+                              <FileText className="w-4 h-4 mr-1" />
+                              Download NOC Template
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  
+                {/*    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800/80 flex items-center justify-center text-blue-600 dark:text-blue-300 mr-3">
+                        <CreditCard className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-800 dark:text-white">Registration Fee</h4>
+                        <ul className="list-disc pl-5 mt-1.5 space-y-1.5 text-gray-600 dark:text-gray-300 text-sm">
+                          <li>₹800 → All members have active IEEE Membership</li>
+                          <li>₹1000 → One or more members do not have IEEE Membership</li>
+                          <li>Upload payment screenshot with UTR ID + Transaction ID</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800/80 flex items-center justify-center text-blue-600 dark:text-blue-300 mr-3">
+                        <CheckCircle className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-800 dark:text-white">Verification (Mandatory)</h4>
+                        <ul className="list-disc pl-5 mt-1.5 space-y-1.5 text-gray-600 dark:text-gray-300 text-sm">
+                          <li>All team members must complete verification</li>
+                          <li>Enter IEEE Membership ID and basic details</li>
+                          <li>FREE and ensures eligibility validation</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800/80 flex items-center justify-center text-blue-600 dark:text-blue-300 mr-3">
+                        <QrCode className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-800 dark:text-white">Approval & Entry Pass</h4>
+                        <p className="text-gray-600 dark:text-gray-300 text-sm mt-1.5 leading-relaxed">
+                          After verification, your team's request will be reviewed. Upon approval, you'll receive an Entry Pass + QR Ticket via email for RAMpage V2.6.
                         </p>
                       </div>
                     </div>
                     
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-300 font-medium mr-3 mt-0.5">
-                        2
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-800 dark:text-white">Complete Registration</h4>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                          After scanning, you'll be directed to the registration form to enter your details.
-                        </p>
-                      </div>
+                    {/* Download NOC Button */}
+                    <div className="mt-6">
+                      <a 
+                        href={require("../assets/images/NOC.docx")} // Update this path to your actual NOC file
+                        download="IEEE_NOC_Document"
+                        className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
+                      >
+                        <FileText className="w-5 h-5 mr-2" />
+                        Download NOC
+                      </a>
+                      <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
+                        Download the No Objection Certificate (NOC) for your institution
+                      </p>
                     </div>
                     
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-300 font-medium mr-3 mt-0.5">
-                        3
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-gray-800 dark:text-white">Get Confirmation</h4>
-                        <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-                          You'll receive a confirmation email with event details after successful registration.
-                        </p>
-                      </div>
+                    {/* Continue to Register Button */}
+                    <div className="mt-6">
+                      <a 
+                        href="https://luma.com/pgy9mouz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                      >
+                        <Users className="w-5 h-5 mr-2" />
+                        Continue to Register
+                      </a>
+                      <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
+                        You'll be redirected to LUMA to complete your registration
+                      </p>
                     </div>
                   </div>
                 </div>
-                
-                {/* Event Details */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-600">
-                  <h3 className="font-bold text-lg text-gray-800 dark:text-white mb-4">Event Details</h3>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="text-blue-500 dark:text-blue-400 mt-0.5">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                        </svg>
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Date & Time</p>
-                        <p className="text-gray-800 dark:text-gray-200">Friday<br/>23rd 9:00 am to 24th 9 am</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start">
-                      <div className="text-blue-500 dark:text-blue-400 mt-0.5">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Location</p>
-                        <p className="text-gray-800 dark:text-gray-200">KLH University<br/> Bowrampet
-
-Bowrampet Village, Bachupally Mandal Hyderabad,Telangana,500043,India
-</p>
-                      </div>
-                    </div>
-                    
-                    <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
-                      <h4 className="font-semibold text-gray-800 dark:text-white mb-2">What to Bring</h4>
-                      <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                        <li>Your registration confirmation (digital or printed)</li>
-                        <li>Photo ID for check-in</li>
-                        <li>Laptop or tablet (optional)</li>
-                        <li>Questions for our speakers</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Contact Information */}
-                <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm border border-gray-200 dark:border-gray-600">
-                  <h3 className="font-bold text-lg text-gray-800 dark:text-white mb-3">Need Help?</h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    If you're having trouble with registration or have any questions, please contact our support team.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center text-blue-600 dark:text-blue-400">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                      </svg>
-                      <a href="bmp.ieeeklefb.sb@gmail.com" className="hover:underline">KLEFB</a>
-                    </div>
-                    <div className="flex items-center text-blue-600 dark:text-blue-400">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                      </svg>
-                      <a href="tel:+11234567890" className="hover:underline">+91 98490 94295</a>
-                    </div>
-                  </div>
-                </div>
-                
-                <a
-                  href="https://luma.com/pgy9mouz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200 mt-6"
-                >
-                  Continue to Registration
-                  
-                </a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        
+      
+    
   );
 };
 

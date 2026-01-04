@@ -367,65 +367,69 @@ const OurTeam = () => {
           transition={{ delay: 0.35 }}
           className="mt-10 mb-12 max-w-6xl mx-auto px-4"
         >
-          <div className="flex flex-col md:flex-row gap-6 justify-center">
+          <div className="w-full flex flex-col md:flex-row gap-8 justify-center">
             {/* First Advisor */}
-            <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 border-2 border-blue-200 dark:border-blue-700 shadow-2xl flex items-center gap-6">
-              <img
-                src={principal}
-                className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/40"
-                alt="Dr. Lakshmi Prasanna Yeluri"
-              />
+            <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-3xl p-8 border-2 border-blue-200 dark:border-blue-700 shadow-2xl flex items-center gap-6">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/40">
+                <img
+                  src={principal}
+                  className="w-full h-full object-cover"
+                  alt="Dr. Lakshmi Prasanna Yeluri"
+                />
+              </div>
               <div className="text-left">
-                <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                <p className="text-base font-semibold text-blue-600 dark:text-blue-400 mb-2">
                   Faculty Advisor
                 </p>
 
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-        l koteswararao
+      <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+        Dr. L Koteswararao
       </h3>
 
-      <p className="text-gray-600 dark:text-gray-300 text-sm">
+      <p className="text-gray-600 dark:text-gray-300 text-base">
         Computer Science and Information Technology
       </p>
 
       <a
-        href="https://www.linkedin.com/in/dr-lakshmi-prasanna-yeluri-41321458/"
+        href="https://www.linkedin.com/in/dr-koteswara-rao-l-29300241/?originalSubdomain=in"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl hover:shadow-2xl"
       >
-        <Linkedin className="w-4 h-4" /> LinkedIn
+        <Linkedin className="w-5 h-5" /> LinkedIn
               </a>
             </div>
           </div>
 
           {/* Second Advisor */}
-          <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-6 border-2 border-blue-200 dark:border-blue-700 shadow-2xl flex items-center gap-6">
-            <img
-              src={principal}
-              className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/40"
-              alt="Lakshmi Prasanna"
-            />
+          <div className="w-full md:w-1/2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-3xl p-8 border-2 border-blue-200 dark:border-blue-700 shadow-2xl flex items-center gap-6">
+              <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/40">
+                <img
+                  src={ithod}
+                  className="w-full h-full object-cover"
+                  alt="Dr. Sk Khaja Shareef"
+                />
+              </div>
             <div className="text-left">
-              <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-1">
+              <p className="text-base font-semibold text-blue-600 dark:text-blue-400 mb-2">
                 Faculty Advisor
               </p>
 
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-        l koteswar rao
+      <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+        Dr. Sk Khaja Shareef
       </h3>
 
-      <p className="text-gray-600 dark:text-gray-300 text-sm">
+      <p className="text-gray-600 dark:text-gray-300 text-base">
         Computer Science and Information Technology
       </p>
 
       <a
-        href="#"
+        href="https://www.linkedin.com/in/dr-sk-khaja-shareef-54513528/"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl hover:shadow-2xl"
       >
-        <Linkedin className="w-4 h-4" /> LinkedIn
+        <Linkedin className="w-5 h-5" /> LinkedIn
               </a>
             </div>
           </div>
@@ -495,7 +499,7 @@ const OurTeam = () => {
                 <img 
                   src={currentAdvisor.img} 
                   alt={currentAdvisor.name} 
-                  className="relative w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-top border-4 border-white dark:border-gray-700 shadow-2xl ring-4 ring-blue-500/30"
+                  className="relative w-56 h-56 md:w-64 md:h-64 rounded-full object-cover object-top border-4 border-white dark:border-gray-700 shadow-2xl ring-4 ring-blue-500/30"
                 />
                 <div className="absolute -bottom-3 -right-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full p-3 shadow-xl ring-4 ring-white dark:ring-gray-800">
                   <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
@@ -538,7 +542,7 @@ const OurTeam = () => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <Linkedin className="w-6 h-6 relative z-10" />
+                    <Linkedin className="w-7 h-7 relative z-10" />
                     <span className="relative z-10 text-base">LinkedIn Profile</span>
                   </motion.a>
                 )}
@@ -598,7 +602,7 @@ const OurTeam = () => {
                 <img 
                   src={member.img} 
                   alt={member.name} 
-                  className={`w-full h-full rounded-full object-cover ${member.img === s7 ? 'scale-90' : ''} border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/30`} 
+                  className={`w-full h-full rounded-full object-cover ${member.img === s7 ? 'scale-90' : ''} border-4 border-white dark:border-gray-700 shadow-xl ring-2 ring-blue-500/30 scale-110`} 
                   style={member.img === s7 ? { objectPosition: '55% 40%' } : {}} 
                 />
               </div>
@@ -620,7 +624,7 @@ const OurTeam = () => {
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className="w-6 h-6" />
                 </motion.a>
               )}
               {member.email && (
