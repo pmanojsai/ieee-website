@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
+import backgroundImage from '../assets/images/background.webp';
 import { Link } from 'react-router-dom';
 import ieeeLogo from '../assets/images/logo.svg.png';
 import algorandLogo from '../assets/images/algorand.png';
@@ -92,16 +93,15 @@ const Rampage = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white min-h-screen flex items-center">
+      <div className="relative overflow-hidden min-h-screen flex items-center" style={{
+        backgroundImage: `linear-gradient(to bottom right, rgba(233, 30, 30, 1), rgba(10, 0, 75, 0.8), rgba(59, 160, 16, 0.8)), url(${backgroundImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat'
+      }}>
         {/* Floating Lines Background */}
         <FloatingLinesBackground />
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1)_0%,transparent_70%)]"></div>
-          <div className="absolute top-1/3 -left-1/4 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl"></div>
-          <div className="absolute top-1/2 -right-1/4 w-96 h-96 bg-purple-500/10 rounded-full filter blur-3xl"></div>
-        </div>
         
         <div className="max-w-7xl mx-auto px-4 py-20 md:py-32 text-center relative z-10 w-full">
           <motion.div 
@@ -120,7 +120,7 @@ const Rampage = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold relative">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100">RAMPAGE </span>
-                <span className="text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">2.6</span>
+                <span className="text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]">v2.6</span>
               </h1>
               <motion.h2 
                 className="text-2xl md:text-3xl font-medium text-blue-200 mt-6"
@@ -305,7 +305,7 @@ const Rampage = () => {
                   className="group relative px-8 py-4 font-medium text-lg rounded-full overflow-hidden border-2 border-white/20 hover:border-white/40 transition-all duration-300"
                   whileHover={{ 
                     scale: 1.03,
-                    backgroundColor: 'rgba(255, 255, 255, 0.05)'
+                    backgroundColor: 'rgba(182, 55, 55, 0.05)'
                   }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -544,11 +544,11 @@ const Rampage = () => {
           <div className="flex flex-col items-center">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800 mb-4">
               <Clock className="w-4 h-4 mr-2" />
-              Registration Open Now!
+              Registrations Open Now!
             </div>
           </div>
           <h2 className="text-3xl font-extrabold sm:text-4xl mb-6">
-            Ready to Join Rampage 2.6?
+            Ready to Join Rampage v2.6?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
             Don't miss out on this exciting 24-hour hackathon. Build something amazing with us!
@@ -637,8 +637,8 @@ const Rampage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-400">
-                    <h4 className="text-sm font-medium text-blue-800 dark:text-blue-200 mb-2">Key Focus Areas:</h4>
+                  <div className="mt-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg border-l-4 border-red-400">
+                    <h4 className="text-sm font-medium text-red-800 dark:text-red-200 mb-2">Key Focus Areas:</h4>
                     <ul className="space-y-1 text-sm text-gray-700 dark:text-gray-300">
                       <li className="flex items-center"><span className="text-blue-500 mr-2">✓</span> Verification</li>
                       <li className="flex items-center"><span className="text-blue-500 mr-2">✓</span> Implementation</li>

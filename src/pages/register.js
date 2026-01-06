@@ -187,8 +187,11 @@ const Register = () => {
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Date & Time</p>
-                      <p className="text-gray-800 dark:text-gray-200">Friday<br/>23rd 9:00 am to 24th 9 am</p>
+                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Event Date & Time</p>
+                      <p className="text-gray-800 dark:text-gray-200">
+                        Friday, February 23, 2024<br/>
+                        9:00 AM - Saturday, February 24, 2024 9:00 AM (24-hour event)
+                      </p>
                     </div>
                   </div>
                   
