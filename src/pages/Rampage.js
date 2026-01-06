@@ -527,14 +527,6 @@ const Rampage = () => {
               </div>
             </motion.div>
           </div>
-          
-          {/* Rampage 2.5 Gallery */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Rampage 2.5 Gallery</h3>
-            <div className="rounded-xl overflow-hidden shadow-2xl">
-              <ImageCarousel images={[p1, p2, p3, p4, p5, p6, p7]} />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -859,6 +851,7 @@ const Rampage = () => {
         </div>
       )}
     </div>
+    
   );
 };
 

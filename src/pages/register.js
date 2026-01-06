@@ -84,49 +84,151 @@ const Register = () => {
             </p>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-8 rounded-full"></div>
             
-            {/* Registration Guidelines Section */}
-            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl mb-8">
-              <h2 className="text-2xl font-bold text-blue-800 dark:text-blue-200 mb-4 flex items-center">
-                <FileText className="w-6 h-6 mr-2" />
-                Registration Guidelines
-              </h2>
-              
-              <div className="space-y-6">
-                {/* Team Formation */}
-                <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
-                  <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3 flex items-center">
-                    <Users className="w-5 h-5 mr-2 text-blue-500" />
-                    Team Formation
-                  </h3>
-                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>Form a team of 2–4 members.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>Nominate a Team Lead for payment and communication.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>Pay the applicable registration fee:</span>
-                      <ul className="ml-6 mt-2 space-y-1">
-                        <li className="flex items-start">
-                          <span className="text-green-500 mr-2">✓</span>
-                          <span><strong>₹800</strong> → All members have active IEEE Membership.</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-green-500 mr-2">✓</span>
-                          <span><strong>₹1000</strong> → One or more members do not have IEEE Membership.</span>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>Upload the payment screenshot and provide the UTR ID + Transaction ID for verification.</span>
-                    </li>
-                  </ul>
-                </div>
+           {/* Registration Guidelines Section */}
+<div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl mb-8">
+  <h2 className="text-2xl font-bold text-blue-800 dark:text-blue-200 mb-4 flex items-center">
+    <FileText className="w-6 h-6 mr-2" />
+    Registration Guidelines
+  </h2>
+
+  <div className="space-y-6">
+    {/* Team Formation */}
+    <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+      <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3 flex items-center">
+        <Users className="w-5 h-5 mr-2 text-blue-500" />
+        Team Composition
+      </h3>
+
+      <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Each team must consist of <strong>2–4 members</strong>.</span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Individual registrations are <strong>not allowed</strong>.</span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>
+            All team members must complete individual registration using the
+            <strong> same Team Name and Transaction ID</strong>.
+          </span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Duplicate or multiple submissions by the same team will be rejected.</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Registration Fee */}
+    <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+      <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3">
+        Registration Fee Structure
+      </h3>
+
+      <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+        <li className="flex items-start">
+          <span className="text-green-500 mr-2">✓</span>
+          <span>
+            <strong>₹800 per team</strong> → Only if <strong>all members</strong> are active IEEE members
+            with valid Membership IDs.
+          </span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-green-500 mr-2">✓</span>
+          <span>
+            <strong>₹1000 per team</strong> → If <strong>even one member</strong> is not an IEEE member.
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Verification */}
+    <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+      <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3">
+        Verification Rules
+      </h3>
+
+      <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>IEEE Membership IDs will be verified by the organizing committee.</span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>
+            Invalid, expired, or fake Membership IDs will result in the team being
+            charged the applicable fee.
+          </span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Failure to comply may lead to cancellation of registration.</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* On-Site Documents */}
+    <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+      <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3">
+        On-Site Mandatory Documents
+      </h3>
+
+      <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Valid Student ID Card.</span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>NOC (to be submitted during check-in).</span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Participants without these documents may not be allowed to participate.</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Note */}
+    <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
+      <h3 className="font-semibold text-lg text-gray-800 dark:text-white mb-3">
+        Important Notes
+      </h3>
+
+      <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Registration fee is <strong>non-refundable and non-transferable</strong>.</span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>
+            Registration is confirmed only after successful payment and verification.
+            Entry pass QR will be sent via email.
+          </span>
+        </li>
+
+        <li className="flex items-start">
+          <span className="text-blue-500 mr-2">•</span>
+          <span>Decisions of the RAMpage V2.6 Organizing Team are final.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 
                 {/* Secondary Verification */}
                 <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow">
@@ -137,15 +239,15 @@ const Register = () => {
                   <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="text-blue-500 mr-2">•</span>
-                      <span>All team members must complete the verification process.</span>
+                      <span>1.IEEE membership details will be verified by the organizing committee(if applicable). </span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-500 mr-2">•</span>
-                      <span>Each member must provide their IEEE Membership ID and other required details for verification.</span>
+                      <span>2.Invalid, expired, fake, or missing IEEE Membership IDs will result in the team being charged the due amount</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-blue-500 mr-2">•</span>
-                      <span>This step ensures eligibility for the event.</span>
+                      <span>3. Failure to comply with verification requirements may lead to cancellation of registration. </span>
                     </li>
                   </ul>
                 </div>
@@ -189,8 +291,8 @@ const Register = () => {
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Event Date & Time</p>
                       <p className="text-gray-800 dark:text-gray-200">
-                        Friday, February 23, 2024<br/>
-                        9:00 AM - Saturday, February 24, 2024 9:00 AM (24-hour event)
+                        Friday, January 23, 2026<br/>
+                        9:00 AM - Saturday, January 24, 2026 9:00 AM (24-hour event)
                       </p>
                     </div>
                   </div>
@@ -210,16 +312,6 @@ const Register = () => {
                         Telangana, 500043, India
                       </p>
                     </div>
-                  </div>
-                  
-                  <div className="pt-4 border-t border-gray-200 dark:border-gray-600">
-                    <h4 className="font-semibold text-gray-800 dark:text-white mb-2">What to Bring</h4>
-                    <ul className="list-disc pl-5 space-y-1 text-sm text-gray-600 dark:text-gray-300">
-                      <li>Your registration confirmation (digital or printed)</li>
-                      <li>Photo ID for check-in</li>
-                      <li>Laptop or tablet (optional)</li>
-                      <li>Questions for our speakers</li>
-                    </ul>
                   </div>
                 </div>
                 
@@ -282,99 +374,129 @@ const Register = () => {
                     {/* Guidelines Toggle */}
                     <button
                       onClick={toggleGuidelines}
-                      className="w-full text-center py-2 text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
+                      className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out mb-6"
                     >
-                      {showGuidelines ? 'Hide' : 'View'} Registration Guidelines
+                      <FileText className="w-4 h-4" />
+                      <span>{showGuidelines ? 'Hide' : 'View'} Participant Rules & Regulations</span>
+                      <svg 
+                        className={`w-4 h-4 transform transition-transform duration-300 ${showGuidelines ? 'rotate-180' : ''}`} 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24" 
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
                     </button>
                     
-                    {showGuidelines && (
-                      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4 text-left">
-                        <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center">
-                          <FileText className="w-5 h-5 mr-2" />
-                          Registration Guidelines
-                        </h3>
-                        <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
-                          <div className="flex items-start">
-                            <div className="flex-shrink-0 mt-1">
-                              <Users className="w-5 h-5 text-blue-500" />
-                            </div>
-                            <div className="ml-2">
-                              <p className="font-medium">Team Composition</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>Each team must consist of 2 to 4 members only</li>
-                                <li>Individual registrations are not allowed</li>
-                                <li>Only ONE registration form submission is permitted per team</li>
-                                <li>Duplicate or multiple submissions by the same team will be rejected</li>
-                              </ul>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start">
-                            <div className="flex-shrink-0 mt-1">
-                              <CreditCard className="w-5 h-5 text-blue-500" />
-                            </div>
-                            <div className="ml-2">
-                              <p className="font-medium">Registration Fee Structure</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li><span className="font-semibold">Non-IEEE Teams:</span> ₹1000 per team, irrespective of the number of members</li>
-                                <li><span className="font-semibold">IEEE Teams:</span> ₹800 per team ONLY if all team members are active IEEE members</li>
-                                <li className="text-sm text-gray-600 dark:text-gray-400">* Fee is non-refundable and non-transferable</li>
-                              </ul>
-                              
-                              <p className="font-medium mt-3">Eligibility for ₹800 Registration Fee</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>All 2–4 team members must be IEEE members</li>
-                                <li>Each member must provide a valid and active IEEE Membership ID</li>
-                                <li>If even one team member is NOT an IEEE member, the team must pay ₹1000</li>
-                              </ul>
-                              
-                              <p className="font-medium mt-3">Verification Rules</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>IEEE membership details will be verified by the organizing committee</li>
-                                <li>Invalid, expired, fake, or missing IEEE Membership IDs will result in the team being charged ₹1000</li>
-                                <li>Failure to comply with verification requirements may lead to cancellation of registration</li>
-                              </ul>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start">
-                            <div className="flex-shrink-0 mt-1">
-                              <CheckCircle className="w-5 h-5 text-blue-500" />
-                            </div>
-                            <div className="ml-2">
-                              <p className="font-medium">Verification Process</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>All team members must complete the verification process</li>
-                                <li>Enter IEEE Membership ID and required details for verification</li>
-                                <li>This step ensures eligibility for the event</li>
-                              </ul>
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-start">
-                            <div className="flex-shrink-0 mt-1">
-                              <AlertTriangle className="w-5 h-5 text-yellow-500" />
-                            </div>
-                            <div className="ml-2">
-                              <p className="font-medium">On-Site Mandatory Documents</p>
-                              <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">All participating students must carry the following on the event day:</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>Valid Student ID Card issued by their respective college/university</li>
-                                <li>NOC (No Objection Certificate), which must be submitted to the organizers during check-in</li>
-                              </ul>
-                              <p className="text-sm text-red-500 dark:text-red-400 mt-2">Participants failing to produce these documents may not be allowed to participate.</p>
-                              
-                              <p className="font-medium mt-4">General Rules</p>
-                              <ul className="list-disc pl-4 mt-1 space-y-1">
-                                <li>The registration fee is non-refundable and non-transferable</li>
-                                <li>Registration is considered complete only after successful payment and document verification</li>
-                                <li>Decisions taken by the Rampage V2.6 24 hour Hackathon Organizing Committee shall be final and binding</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
+ {showGuidelines && (
+  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-4 text-left">
+    <h3 className="font-semibold text-blue-800 dark:text-blue-200 mb-2 flex items-center">
+      <FileText className="w-5 h-5 mr-2" />
+      Participant Rules & Regulations
+    </h3>
+
+    <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
+
+      {/* Identification & Attendance */}
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mt-1">
+          <CheckCircle className="w-5 h-5 text-blue-500" />
+        </div>
+        <div className="ml-2">
+          <p className="font-medium">Identification & Attendance</p>
+          <ul className="list-disc pl-4 mt-1 space-y-1">
+            <li>Participants must submit a duly signed undertaking form at or before check-in.</li>
+            <li>Security checks and bag frisking will be conducted during check-in.</li>
+            <li>Participants must carry the hackathon-issued ID card and college ID at all times.</li>
+            <li>Punctuality is mandatory for reviews, evaluations, and final presentations.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Campus & Area Restrictions */}
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mt-1">
+          <AlertTriangle className="w-5 h-5 text-yellow-500" />
+        </div>
+        <div className="ml-2">
+          <p className="font-medium">Campus & Area Restrictions</p>
+          <ul className="list-disc pl-4 mt-1 space-y-1">
+            <li>Participants must remain within the designated hackathon area and university campus.</li>
+            <li>Leaving the campus after check-in is not allowed without organizer permission.</li>
+            <li>Restricted areas and opposite gender-designated areas must not be entered.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Conduct & Behaviour */}
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mt-1">
+          <Users className="w-5 h-5 text-blue-500" />
+        </div>
+        <div className="ml-2">
+          <p className="font-medium">Conduct & Behaviour</p>
+          <ul className="list-disc pl-4 mt-1 space-y-1">
+            <li>Participants must maintain respectful and professional behavior.</li>
+            <li>Verbal or physical harassment of any participant is strictly prohibited.</li>
+            <li>Fighting, abusive language, or misconduct will lead to immediate disqualification.</li>
+            <li>Participants must not disturb other teams and must maintain discipline.</li>
+            <li>Participants should dress in a decent and professional manner.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Safety & Emergency */}
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mt-1">
+          <AlertTriangle className="w-5 h-5 text-red-500" />
+        </div>
+        <div className="ml-2">
+          <p className="font-medium">Safety & Emergency</p>
+          <ul className="list-disc pl-4 mt-1 space-y-1">
+            <li>CCTV surveillance will be active 24×7 across the campus and hackathon areas.</li>
+            <li>Any health issue, emergency, or safety concern must be reported immediately.</li>
+            <li>Participants feeling unsafe must inform the organizers without delay.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Personal Responsibility */}
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mt-1">
+          <CheckCircle className="w-5 h-5 text-blue-500" />
+        </div>
+        <div className="ml-2">
+          <p className="font-medium">Personal Responsibility & Rules</p>
+          <ul className="list-disc pl-4 mt-1 space-y-1">
+            <li>Participants are fully responsible for their personal belongings.</li>
+            <li>Any damage to university property will be the responsibility of the team.</li>
+            <li>Smoking, alcohol, drugs, or prohibited substances are strictly banned on campus.</li>
+            <li>All work must be original and developed during the hackathon.</li>
+            <li>Photography and videography are allowed only in permitted areas with consent.</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Authority */}
+      <div className="flex items-start">
+        <div className="flex-shrink-0 mt-1">
+          <FileText className="w-5 h-5 text-blue-500" />
+        </div>
+        <div className="ml-2">
+          <p className="font-medium">Authority & Final Decision</p>
+          <ul className="list-disc pl-4 mt-1 space-y-1">
+            <li>Judges’ and organizers’ decisions are final and binding.</li>
+            <li>Organizers reserve the right to modify rules or schedules if required.</li>
+            <li>Violation of rules may result in disqualification without refund.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+)}
+
                   </>
                 ) : (
                   <div className="space-y-4">
@@ -539,8 +661,8 @@ const Register = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            
+          
         
       
     
