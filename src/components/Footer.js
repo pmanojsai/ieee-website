@@ -1,10 +1,9 @@
 import React from 'react';
-import { Linkedin, Twitter, Mail, MapPin, Phone, Clock, Heart } from 'lucide-react';
+import { Linkedin, Mail, MapPin, Phone, Clock, Heart } from 'lucide-react';
 
 const socials = [
   { href: 'https://www.linkedin.com', icon: <Linkedin size={20} />, label: 'LinkedIn' },
-  { href: 'https://twitter.com', icon: <Twitter size={20} />, label: 'Twitter' },
-  { href: 'mailto:info@ieee.org', icon: <Mail size={20} />, label: 'Email' },
+  { href: 'mailto:bmp.ieeeklefb.sb@gmail.com', icon: <Mail size={20} />, label: 'Email' },
 ];
 
 const Footer = () => (
@@ -19,7 +18,7 @@ const Footer = () => (
               <span className="text-white font-bold text-xl">I</span>
             </div>
             <div>
-             <h3 className="text-2xl font-bold">IEEE College Chapter</h3>
+             <h3 className="text-2xl font-bold">KLEFB IEEE Student Branch</h3>
               <p className="text-blue-200">Advancing Technology for Humanity</p>
             </div>
           </div>
@@ -68,11 +67,11 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-              <span className="text-blue-100 text-sm">+91 40 8456 7890</span>
+              <a href="tel:+919849094295" className="text-blue-100 text-sm hover:text-yellow-400 transition-colors">+91 98490 94295</a>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-yellow-400 flex-shrink-0" />
-              <span className="text-blue-100 text-sm">ieee@klh.edu.in</span>
+              <a href="mailto:bmp.ieeeklefb.sb@gmail.com" className="text-blue-100 text-sm hover:text-yellow-400 transition-colors">bmp.ieeeklefb.sb@gmail.com</a>
             </div>
             <div className="flex items-center gap-3">
               <Clock className="w-5 h-5 text-yellow-400 flex-shrink-0" />
@@ -89,7 +88,7 @@ const Footer = () => (
       <div className="max-w-7xl mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-blue-200 text-sm">
-            <span>© {new Date().getFullYear()} IEEE College Chapter. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} KLEFB IEEE Student Branch. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-4 text-blue-200 text-sm">
             <a href="/privacy" className="hover:text-yellow-400 transition-colors">Privacy Policy</a>
