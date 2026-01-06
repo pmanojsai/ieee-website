@@ -470,15 +470,15 @@ const Rampage = () => {
                   <Calendar className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold">Event Date & Time</h4>
-                    <p className="text-gray-600 dark:text-gray-300">Wednesday, January 23, 2025</p>
-                    <p className="text-gray-600 dark:text-gray-300">10:00 AM - 4:00 PM</p>
+                    <p className="text-gray-600 dark:text-gray-300">From 9 am on March 20, 2025, to 9 am on March 21, 2025</p>
+                    
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Users className="w-5 h-5 mt-1 mr-3 text-blue-600 dark:text-blue-400 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold">Participants</h4>
-                    <p className="text-gray-600 dark:text-gray-300">150+ developers and designers</p>
+                    <p className="text-gray-600 dark:text-gray-300">300+ developers and designers</p>
                   </div>
                 </li>
                 <li className="flex items-start">

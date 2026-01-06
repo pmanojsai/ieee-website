@@ -322,11 +322,13 @@ const Register = () => {
                     If you're having trouble with registration or have any questions, please contact our support team.
                   </p>
                   <div className="space-y-2 text-sm">
-                    <div className="flex items-center text-blue-600 dark:text-blue-400">
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                      </svg>
-                      <a href="mailto:bmp.ieeeklefb.sb@gmail.com" className="hover:underline">bmp.ieeeklefb.sb@gmail.com</a>
+                    <div className="flex items-center">
+                      <a href="mailto:rampage.klhb@gmail.com" className="flex items-center text-blue-600 dark:text-blue-400 hover:underline">
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        rampage.klhb@gmail.com
+                      </a>
                     </div>
                     <div className="flex items-start text-blue-600 dark:text-blue-400">
                       <svg className="w-4 h-4 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -628,19 +630,37 @@ const Register = () => {
                       </div>
                     </div>
                     
-                    {/* Download NOC Button */}
-                    <div className="mt-6">
-                      <a 
-                        href={require("../assets/images/NOC.docx")} // Update this path to your actual NOC file
-                        download="IEEE_NOC_Document"
-                        className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
-                      >
-                        <FileText className="w-5 h-5 mr-2" />
-                        Download NOC
-                      </a>
-                      <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
-                        Download the No Objection Certificate (NOC) for your institution
-                      </p>
+                    {/* Download Buttons */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                      {/* NOC Button */}
+                      <div>
+                        <a 
+                          href={require("../assets/images/NOC.docx")}
+                          download="IEEE_NOC_Document"
+                          className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
+                        >
+                          <FileText className="w-5 h-5 mr-2" />
+                          Download NOC
+                        </a>
+                        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
+                          No Objection Certificate for your institution
+                        </p>
+                      </div>
+                      
+                      {/* Student Brochure Button */}
+                      <div>
+                        <a 
+                          href={require("../assets/images/sb-1.pdf")}
+                          download="IEEE_Student_Brochure"
+                          className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
+                        >
+                          <FileText className="w-5 h-5 mr-2" />
+                          Student Brochure
+                        </a>
+                        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
+                          Download the student information brochure
+                        </p>
+                      </div>
                     </div>
                     
                     {/* Continue to Register Button */}
