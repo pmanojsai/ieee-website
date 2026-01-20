@@ -358,12 +358,20 @@ const Register = () => {
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4 text-center">Problem Statements</h2>
                 <p className="text-gray-600 dark:text-gray-300 text-center mb-6">Select a domain to view problem statements</p>
                 <div className="grid grid-cols-1 gap-4">
-                  <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-                    Embedded IoT
-                  </button>
-                  <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out">
-                    VLSI
-                  </button>
+                  <a 
+                    href={require("../assets/images/embeded.pdf")} 
+                    download="IEEE_RAMpage_Embedded_IoT_Problem_Statement.pdf"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-center"
+                  >
+                    Download Embedded IoT Problem Statement
+                  </a>
+                  <a 
+                    href={require("../assets/images/vlsi.pdf")} 
+                    download="IEEE_RAMpage_VLSI_Problem_Statement.pdf"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 ease-in-out text-center"
+                  >
+                    Download VLSI Problem Statement
+                  </a>
                 </div>
               </div>
                 
