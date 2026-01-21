@@ -1,16 +1,25 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Check, Camera, X, AlertTriangle, Users, CreditCard, FileText, CheckCircle, QrCode } from 'lucide-react';
+import RegistrationClosed from '../components/RegistrationClosed';
 // Import your QR code image (replace with your actual QR code image path)
 import qrCodeImage from '../assets/images/qr.png';
 
 const Register = () => {
+  // Set this to true to show the registration closed page
+  const [isRegistrationClosed, setIsRegistrationClosed] = useState(true);
+  
   const [showScanner, setShowScanner] = useState(false);
   const [scanResult, setScanResult] = useState('');
   const [isScanning, setIsScanning] = useState(false);
   const [showGuidelines, setShowGuidelines] = useState(false);
   const videoRef = useRef(null);
   const streamRef = useRef(null);
+  
+  // Show registration closed page if isRegistrationClosed is true
+  if (isRegistrationClosed) {
+    return <RegistrationClosed />;
+  }
 
   const handleScan = (data) => {
     if (data) {
@@ -272,6 +281,59 @@ const Register = () => {
                       <span>This confirms your team's eligibility to participate in RAMpage V2.6</span>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* All Downloads Section */}
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-600 mt-8">
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">Important Downloads</h2>
+              
+              {/* Problem Statements */}
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Problem Statements</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a 
+                    href={require("../assets/images/embeded.pdf")} 
+                    download="IEEE_RAMpage_Embedded_IoT_Problem_Statement.pdf"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-center flex flex-col items-center justify-center"
+                  >
+                    <span>Download</span>
+                    <span className="font-semibold">Embedded IoT Problem Statement</span>
+                  </a>
+                  <a 
+                    href={require("../assets/images/vlsi.pdf")} 
+                    download="IEEE_RAMpage_VLSI_Problem_Statement.pdf"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-center flex flex-col items-center justify-center"
+                  >
+                    <span>Download</span>
+                    <span className="font-semibold">VLSI Problem Statement</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Other Important Documents */}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Event Documents</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a 
+                    href={require("../assets/images/NOC.docx")}
+                    download="IEEE_NOC_Document"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-center flex flex-col items-center justify-center"
+                  >
+                    <span>Download</span>
+                    <span className="font-semibold">NOC Document</span>
+                    <span className="text-sm font-normal opacity-90">No Objection Certificate</span>
+                  </a>
+                  <a 
+                    href={require("../assets/images/sb-1.pdf")}
+                    download="IEEE_Student_Brochure"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 text-center flex flex-col items-center justify-center"
+                  >
+                    <span>Download</span>
+                    <span className="font-semibold">Student Brochure</span>
+                    <span className="text-sm font-normal opacity-90">Event Information & Guidelines</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -653,38 +715,6 @@ const Register = () => {
                       </div>
                     </div>
                     
-                    {/* Download Buttons */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                      {/* NOC Button */}
-                      <div>
-                        <a 
-                          href={require("../assets/images/NOC.docx")}
-                          download="IEEE_NOC_Document"
-                          className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200"
-                        >
-                          <FileText className="w-5 h-5 mr-2" />
-                          Download NOC
-                        </a>
-                        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
-                          No Objection Certificate for your institution
-                        </p>
-                      </div>
-                      
-                      {/* Student Brochure Button */}
-                      <div>
-                        <a 
-                          href={require("../assets/images/sb-1.pdf")}
-                          download="IEEE_Student_Brochure"
-                          className="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
-                        >
-                          <FileText className="w-5 h-5 mr-2" />
-                          Student Brochure
-                        </a>
-                        <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 text-center">
-                          Download the student information brochure
-                        </p>
-                      </div>
-                    </div>
                     
                     {/* Continue to Register Button */}
                     <div className="mt-6">
