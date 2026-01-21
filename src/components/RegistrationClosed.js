@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, X } from 'lucide-react';
+import { ArrowLeft, X, FileText } from 'lucide-react';
 
 const RegistrationClosed = () => {
   return (
@@ -18,11 +18,11 @@ const RegistrationClosed = () => {
         
         {/* Message */}
         <p className="text-gray-600 mb-8">
-          We're sorry, but registrations for this event have now closed. Stay tuned for future events and opportunities!
+          We're sorry, but registrations for this event have now closed. Stay tuned for future hackerthons and opportunities!
         </p>
         
-        {/* Button */}
-        <div className="flex justify-center">
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
           <Link 
             to="/" 
             className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
@@ -30,6 +30,26 @@ const RegistrationClosed = () => {
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
+          <a
+            href="/NOC_Rampage_V2.6.docx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Download NOC
+          </a>
+        </div>
+        
+        {/* Contact Information */}
+        <div className="mt-6 text-sm text-gray-600">
+          For any queries, contact us at:{' '}
+          <a 
+            href="mailto:rampage.klhb@gmail.com" 
+            className="text-blue-600 hover:underline"
+          >
+            rampage.klhb@gmail.com
+          </a>
         </div>
       </div>
     </div>
