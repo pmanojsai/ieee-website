@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
+import { Shield, Brain, Cpu, Code2, Utensils, Coffee, Award, Gift, FileText, Star, Trophy, Users, Calendar, Clock, ChevronLeft, ChevronRight, MapPin, Download } from 'lucide-react';
 import backgroundImage from '../assets/images/background.webp';
 import { Link } from 'react-router-dom';
 import ieeeLogo from '../assets/images/logo.svg.png';
@@ -559,6 +559,40 @@ const Rampage = () => {
             >
               View Schedule
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Statements Section */}
+      <section id="problem-statements" className="py-12 sm:py-16 bg-white dark:bg-gray-900 px-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+              Problem Statements: IoT, VLSI & Embedded Systems
+            </h2>
+            
+            <p className="mt-4 text-xl text-gray-600 dark:text-gray-300">
+               Reminder: Components will not be provided by the team, so please ensure you bring all the required materials with you.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <a 
+                href={require("../assets/images/vlsi.pdf")}
+                download="VLSI_Problem_Statement.pdf"
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 flex items-center"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download VLSI Problem Statement
+              </a>
+              <a 
+                href={require("../assets/images/embeded.pdf")} 
+                download="Embedded_Systems_Problem_Statement.pdf"
+                className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors duration-300 flex items-center"
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download Embedded Systems Problem Statement
+              </a>
+            </div>
+           
           </div>
         </div>
       </section>
